@@ -18,7 +18,7 @@ public class SampleController {
 	@HystrixCommand
 	@RequestMapping("/hello")
 	public String printHelloWorld() throws InterruptedException {
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		String result = restTemplate.getForObject("http://eurekaclient2/hello", String.class);
 
 		return result;
